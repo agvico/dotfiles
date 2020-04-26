@@ -79,8 +79,7 @@ bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
 # My custom keybindings
 bindsym $mod+Shift+0 exec blurlock	# start lockscreen
 bindsym $mod+t exec texstudio 		# Start TexStudio (LaTeX editor)
-#bindsym $mod+i exec idea		# Start IntelliJ Idea Community
-bindsym $mod+i exec intellij-idea-ultimate-edition # Start IntelliJ Idea Ultimate
+bindsym $mod+i exec idea		# Start IntelliJ Idea
 
 # focus_follows_mouse no
 
@@ -154,10 +153,10 @@ bindsym $mod+Ctrl+Left workspace prev
 # something like: set $ws1 1:mail
 #                 set $ws2 2:
 # In order to use these icons, you must install ttf-font-awesome package.
-set $ws1 " 1: "
+set $ws1 " 1: "
 set $ws2 " 2: "
 set $ws3 " 3: "
-set $ws4 " 4: "
+set $ws4 " 4: "
 set $ws5 " 5: "
 set $ws6 " 6: "
 set $ws7 "7: "
@@ -195,12 +194,10 @@ bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
 
 # Open applications on specific workspaces
  #assign [class=""] $ws1				# TexStudio on ws1
-							# OpenOffice Writer on ws4
- #assign [class="jetbrains-idea-ce"] $ws3		# Idea on ws3
- assign [class="jetbrains-idea"] $ws3
+							# OpenOffice Writer on ws1
+ assign [class="jetbrains-idea-ce"] $ws3		# Idea on ws3
  assign [class="firefox"] $ws2				# web browser on ws2
- assign [class="Pcmanfm"] $ws5				# files on ws5
-# assign [class=""] $sw8					# Spotify on ws8
+ assign [class="Pcmanfm"] $ws4				# files on ws4
 # assign [class="Skype"] $ws5
 
 # Open specific applications in floating mode
@@ -305,7 +302,7 @@ exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 
 # Set screen resolution (use arandr, then save configuration and go to ./screenlayout to see the .sh file with the config)
-exec_always xrandr --output Virtual1 --primary --mode 1680x1050 --pos 0x0 --rotate normal --output Virtual2 --off --output Virtual3 --off --output Virtual4 --off --output Virtual5 --off --output Virtual6 --off --output Virtual7 --off --output Virtual8 --off
+exec xrandr --output Virtual1 --primary --mode 1680x1050 --pos 0x0 --rotate normal --output Virtual2 --off --output Virtual3 --off --output Virtual4 --off --output Virtual5 --off --output Virtual6 --off --output Virtual7 --off --output Virtual8 --off
 
 # Color palette used for the terminal ( ~/.Xresources file )
 # Colors are gathered based on the documentation:
