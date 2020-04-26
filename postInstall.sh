@@ -18,6 +18,9 @@ ln -s ~/Projects/dotfiles/.bashrc ~/.bashrc
 #	SOFTWARE INSTALLATION	#
 #################################
 
+# Install Font Awesome
+yay -S ttf-font-awesome
+
 # Install Firefox
 yay -S firefox
 
@@ -36,4 +39,27 @@ yay -S libreoffice-fresh
 
 # Install LaTeX, TexStudio (LaTeX Editor) and GhostScript for PDF compression
 yay -S texlive-most texstudio ghostscript
+
+# Install R and RStudio
+yay -S r rstudio-desktop-bin
+
+# Install VirtualBox
+yay -S virtualbox
+
+# Install RedShift (for adjusting monitor color temperature)
+yay -S redshift redshift-gtk-git
+
+# Install Dropbox
+yay -S dropbox
+
+# Install snap
+#yay -S snapd
+#sudo systemctl enable --now snapd.socket
+
+# Install Spotify!
+#snap install spotify
+#yay -S lib32-libcanberra-gtk3
+
+# Clean yay cache after installing all packages
+yay -Sc
 

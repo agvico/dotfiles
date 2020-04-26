@@ -159,9 +159,10 @@ set $ws2 " 2: "
 set $ws3 " 3: "
 set $ws4 " 4: "
 set $ws5 " 5: "
-set $ws6 " 6: "
-set $ws7 "7: "
-set $ws8 "8: "
+set $ws6 " 6: "
+set $ws7 " 7: "
+set $ws8 " 8: "
+set $ws9 " 9: "
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -172,6 +173,7 @@ bindsym $mod+5 workspace $ws5
 bindsym $mod+6 workspace $ws6
 bindsym $mod+7 workspace $ws7
 bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
 
 # Move focused container to workspace
 bindsym $mod+Ctrl+1 move container to workspace $ws1
@@ -182,6 +184,7 @@ bindsym $mod+Ctrl+5 move container to workspace $ws5
 bindsym $mod+Ctrl+6 move container to workspace $ws6
 bindsym $mod+Ctrl+7 move container to workspace $ws7
 bindsym $mod+Ctrl+8 move container to workspace $ws8
+bindsym $mod+Ctrl+9 move container to workspace $ws9
 
 # Move to workspace with focused container
 bindsym $mod+Shift+1 move container to workspace $ws1; workspace $ws1
@@ -192,16 +195,19 @@ bindsym $mod+Shift+5 move container to workspace $ws5; workspace $ws5
 bindsym $mod+Shift+6 move container to workspace $ws6; workspace $ws6
 bindsym $mod+Shift+7 move container to workspace $ws7; workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
+bindsym $mod+Shift+9 move container to workspace $ws9; workspace $ws9
 
 # Open applications on specific workspaces
  #assign [class="jetbrains-idea-ce"] $ws3		# Idea on ws3
  assign [class="jetbrains-idea"] $ws3
  assign [class="Apache NetBeans IDE 11.3"] $ws3		# Netbeans on ws3
+ assign [class="RStudio"] $ws3				# RStudio on ws3
  assign [class="firefox"] $ws2				# web browser on ws2
  assign [class="libreoffice-startcenter|Soffice"] $ws4	# LibreOffice Apps on ws4
  assign [class="TeXstudio"] $ws4			# TexStudio on ws4
  assign [class="Pcmanfm"] $ws5				# files on ws5
- assign [class="spotify"] $ws8				# Spotify on ws8
+ assign [class="Spotify|spotify"] $ws8				# Spotify on ws8
+ assign [class="VirtualBox Manager"] $ws9		# VirtualBox on workspace 9
 # assign [class="Skype"] $ws5
 
 # Open specific applications in floating mode
@@ -230,7 +236,7 @@ for_window [class="Simple-scan"] floating enable border normal
 for_window [class="(?i)System-config-printer.py"] floating enable border normal
 for_window [class="Skype"] floating enable border normal
 for_window [class="Timeset-gui"] floating enable border normal
-for_window [class="(?i)virtualbox"] floating enable border normal
+#for_window [class="(?i)virtualbox"] floating enable border normal
 for_window [class="Xfburn"] floating enable
 
 # switch to workspace with urgent window automatically
@@ -287,7 +293,7 @@ mode "resize" {
 }
 
 # Lock screen
-bindsym $mod+9 exec --no-startup-id blurlock
+#bindsym $mod+9 exec --no-startup-id blurlock
 
 # Autostart applications
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
@@ -304,6 +310,8 @@ exec --no-startup-id start_conky_maia
 exec --no-startup-id xautolock -time 10 -locker blurlock
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
+exec redshift-gtk
+exec dropbox
 
 # Set screen resolution (use arandr, then save configuration and go to ./screenlayout to see the .sh file with the config)
 exec_always xrandr --output Virtual1 --primary --mode 1680x1050 --pos 0x0 --rotate normal --output Virtual2 --off --output Virtual3 --off --output Virtual4 --off --output Virtual5 --off --output Virtual6 --off --output Virtual7 --off --output Virtual8 --off

@@ -141,5 +141,5 @@ ex ()
 
 # custom aliases
 alias ..='cd ..'
-alias ...="cd ../.."
-alias la = ls -Al
+alias ...='cd ../..'
+alias la='ls -Al'
