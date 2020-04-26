@@ -27,6 +27,9 @@ yay -S firefox
 # Install Java 11
 yay -S jdk11-openjdk
 
+# Install Scala and sbt
+yay -S scala sbt
+
 # Install IntelliJ Idea (Ultimate or Community)
 yay -S intellij-idea-ultimate-edition    # Ultimate edition
 #yay -S intellij-idea-community-edition  # Community edition
@@ -52,13 +55,19 @@ yay -S redshift redshift-gtk-git
 # Install Dropbox
 yay -S dropbox
 
-# Install snap
-#yay -S snapd
+# Install flatpak
+yay -S flatpak
 #sudo systemctl enable --now snapd.socket
 
 # Install Spotify!
-#snap install spotify
+flatpak install spotify
 #yay -S lib32-libcanberra-gtk3
+
+# Install pavucontrol, equalizer and vlc and kodi
+yay -S pulseaudio-equalizer-ladspa pavucontrol vlc kodi
+
+# Install telegram
+yay -S telegram-desktop
 
 # Clean yay cache after installing all packages
 yay -Sc
