@@ -194,13 +194,14 @@ bindsym $mod+Shift+7 move container to workspace $ws7; workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
 
 # Open applications on specific workspaces
- #assign [class=""] $ws1				# TexStudio on ws1
-							# OpenOffice Writer on ws4
  #assign [class="jetbrains-idea-ce"] $ws3		# Idea on ws3
  assign [class="jetbrains-idea"] $ws3
+ assign [class="Apache NetBeans IDE 11.3"] $ws3		# Netbeans on ws3
  assign [class="firefox"] $ws2				# web browser on ws2
+ assign [class="libreoffice-startcenter|Soffice"] $ws4	# LibreOffice Apps on ws4
+ assign [class="TeXstudio"] $ws4			# TexStudio on ws4
  assign [class="Pcmanfm"] $ws5				# files on ws5
-# assign [class=""] $sw8					# Spotify on ws8
+ assign [class="spotify"] $ws8				# Spotify on ws8
 # assign [class="Skype"] $ws5
 
 # Open specific applications in floating mode
