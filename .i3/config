@@ -67,8 +67,8 @@ bindsym $mod+F3 exec pcmanfm
 # bindsym $mod+F3 exec ranger
 bindsym $mod+Shift+F3 exec pcmanfm_pkexec
 bindsym $mod+F5 exec terminal -e 'mocp'
-#bindsym $mod+t exec --no-startup-id pkill compton
-#bindsym $mod+Ctrl+t exec --no-startup-id compton -b
+bindsym $mod+t exec --no-startup-id pkill compton
+bindsym $mod+Ctrl+t exec --no-startup-id compton -b
 bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
 bindsym Print exec --no-startup-id i3-scrot
 bindsym $mod+Print --release exec --no-startup-id i3-scrot -w
@@ -78,9 +78,17 @@ bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
 
 # My custom keybindings
 bindsym $mod+Shift+0 exec blurlock	# start lockscreen
-bindsym $mod+t exec texstudio 		# Start TexStudio (LaTeX editor)
-#bindsym $mod+i exec idea		# Start IntelliJ Idea Community
-bindsym $mod+i exec intellij-idea-ultimate-edition # Start IntelliJ Idea Ultimate
+
+# HERE is gonna be created a custom mode with an application launcher:
+# The idea is to press $mod+p (or other) to launch a menu such as the 
+# poweroff menu with my most commonly used apps (IDEs, Documents, etc.)
+
+
+
+
+
+
+
 
 # focus_follows_mouse no
 
@@ -240,6 +248,8 @@ for_window [class="Timeset-gui"] floating enable border normal
 #for_window [class="(?i)virtualbox"] floating enable border normal
 for_window [class="Xfburn"] floating enable
 for_window [class="Pulseaudio-equalizer-gtk"] floating enable
+for_window [class="Xarchiver"] floating enable
+for_window [class="Gnome-disks"] floating enable
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
@@ -312,6 +322,7 @@ exec --no-startup-id start_conky_maia
 exec --no-startup-id xautolock -time 10 -locker blurlock
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
+exec blueman-applet
 exec redshift-gtk
 exec dropbox
 exec pulseaudio --start

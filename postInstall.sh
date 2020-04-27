@@ -13,6 +13,8 @@ rm ~/.bashrc
 ln -s ~/Projects/dotfiles/.i3 ~/.i3
 ln -s ~/Projects/dotfiles/.bashrc ~/.bashrc
 
+# Copy the wallpaper
+cp wallpaper.jpg ~/Imágenes
 
 #################################
 #	SOFTWARE INSTALLATION	#
@@ -20,6 +22,15 @@ ln -s ~/Projects/dotfiles/.bashrc ~/.bashrc
 
 # Install Font Awesome
 yay -S ttf-font-awesome
+
+# Install RAR support
+yay -S rar xarchiver
+
+# Install blueman (for Bluetooth support)
+yay -S blueman
+
+# Install GNOME Disk Utility (it's easier to me to handle disks this way, sorry)
+yay -S gnome-disk-utility-git
 
 # Install Firefox
 yay -S firefox
@@ -69,6 +80,19 @@ yay -S pulseaudio-equalizer-ladspa pavucontrol vlc kodi
 # Install telegram
 yay -S telegram-desktop
 
+# Install keePass
+yay -S keepass
+
 # Clean yay cache after installing all packages
 yay -Sc
+
+
+
+
+
+#################################################
+#		CONFIGURATION			#
+#################################################
+
+
 
