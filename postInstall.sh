@@ -10,6 +10,7 @@ cd ..
 rm -rf ~/.i3
 rm ~/.bashrc
 
+# Create the symlinks to important files.
 ln -s ~/Projects/dotfiles/.i3 ~/.i3
 ln -s ~/Projects/dotfiles/.bashrc ~/.bashrc
 
@@ -82,6 +83,9 @@ yay -S telegram-desktop
 
 # Install keePass
 yay -S keepass
+
+# Install Nvidia proprietary driver
+sudo mhwd -a pci nonfree 0300
 
 # Clean yay cache after installing all packages
 yay -Sc
