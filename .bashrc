@@ -139,6 +139,10 @@ ex ()
 }
 
 
+# Apply wal colorscheme on new terminals
+(cat ~/.cache/wal/sequences &)
+source ~/.cache/wal/colors-tty.sh
+
 # custom aliases
 alias ..='cd ..'
 alias ...='cd ../..'
