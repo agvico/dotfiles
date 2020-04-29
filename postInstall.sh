@@ -118,4 +118,5 @@ yay -Sc
 #################################################
 
 # Add Rofi configuration
-
+mkdir -p ~/.config/rofi
+ln -s ~/Projects/dotfiles/rofi/config.rasi ~/.config/rofi/config.rasi
