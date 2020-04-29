@@ -22,7 +22,7 @@ bindsym $mod+n border normal
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 #font xft:URWGothic-Book 20
-font pango:Overpass 11
+font pango:Overpass 12
 
 
 # Use Mouse+$mod to drag floating windows
@@ -35,7 +35,8 @@ bindsym $mod+Return exec terminal
 bindsym $mod+Shift+q kill
 
 # start program launcher
-bindsym $mod+d exec --no-startup-id dmenu_recency
+#bindsym $mod+d exec --no-startup-id dmenu_recency
+bindsym $mod+d exec rofi -show drun -show-icons
 
 # launch categorized menu
 bindsym $mod+z exec --no-startup-id morc_menu
@@ -79,7 +80,7 @@ bindsym $mod+Shift+h exec xdg-open /usr/share/doc/manjaro/i3_help.pdf
 bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
 
 # My custom keybindings
-bindsym $mod+Shift+0 exec blurlock		# start lockscreen
+bindsym $mod+Shift+0 exec customlock	 	# start lockscreen
 bindsym $mod+F5 exec com.spotify.Client		# F5 is multimedia (spotify and kodi)
 bindsym $mod+Shift+F5 exec kodi
 bindsym $mod+F4 exec intellij-idea-ultimate-edition # (or just idea) on F4
@@ -317,7 +318,7 @@ mode "resize" {
 
 # Autostart applications
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-exec --no-startup-id nitrogen --restore; sleep 1; compton -b
+exec --no-startup-id nitrogen --restore; sleep 1; compton -b -f
 #exec --no-startup-id manjaro-hello
 exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-power-manager
@@ -327,7 +328,7 @@ exec --no-startup-id clipit
 # exec_always --no-startup-id sbxkb
 exec --no-startup-id start_conky_maia
 # exec --no-startup-id start_conky_green
-exec --no-startup-id xautolock -time 10 -locker blurlock
+exec --no-startup-id xautolock -time 10 -locker customlock
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 exec blueman-applet

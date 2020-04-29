@@ -2,6 +2,8 @@
 
 # Download the dotfiles repo.
 mkdir -p Projects
+mkdir -p .config/rofi
+
 cd Projects
 git clone https://github.com/aklxao2/dotfiles.git .
 cd ..
@@ -14,15 +16,20 @@ rm ~/.bashrc
 ln -s ~/Projects/dotfiles/.i3 ~/.i3
 ln -s ~/Projects/dotfiles/.bashrc ~/.bashrc
 
+
 # Copy the wallpaper
 cp wallpaper.jpg ~/Imágenes
+
+# Copy the custom lockscreen
+chmod +x .i3/lock.sh
+ln -s $HOME/.i3/lock.sh /usr/bin/customlock
 
 #################################
 #	SOFTWARE INSTALLATION	#
 #################################
 
-# Install Font Awesome and overpass font
-yay -S ttf-font-awesome otf-overpass
+# Install Font Awesome and overpass font and Arc theme
+yay -S ttf-font-awesome otf-overpass arc-gtk-theme
 
 # Install pywal (for colorschemes)
 yay -S python-pywal
@@ -93,6 +100,9 @@ yay -S keepass
 # Install Gimp and Inkscape
 yay -S gimp inkscape
 
+# Install Rofi
+yay -S rofi
+
 # Install Nvidia proprietary driver
 sudo mhwd -a pci nonfree 0300
 
@@ -107,5 +117,5 @@ yay -Sc
 #		CONFIGURATION			#
 #################################################
 
-
+# Add Rofi configuration
 
