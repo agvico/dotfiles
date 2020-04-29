@@ -21,8 +21,14 @@ cp wallpaper.jpg ~/Imágenes
 #	SOFTWARE INSTALLATION	#
 #################################
 
-# Install Font Awesome
-yay -S ttf-font-awesome
+# Install Font Awesome and overpass font
+yay -S ttf-font-awesome otf-overpass
+
+# Install pywal (for colorschemes)
+yay -S python-pywal
+
+# Install xca (digital certificates manager)
+yay -S xca
 
 # Install RAR support
 yay -S rar xarchiver
@@ -83,6 +89,9 @@ yay -S telegram-desktop
 
 # Install keePass
 yay -S keepass
+
+# Install Gimp and Inkscape
+yay -S gimp inkscape
 
 # Install Nvidia proprietary driver
 sudo mhwd -a pci nonfree 0300
