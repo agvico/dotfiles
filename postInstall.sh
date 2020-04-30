@@ -17,7 +17,7 @@ ln -s ~/Projects/dotfiles/.bashrc ~/.bashrc
 
 
 # Copy the wallpaper
-cp wallpaper.jpg ~/Imágenes
+cp Projects/dotfiles/wallpaper.jpg ~/Imágenes
 
 # Copy the custom lockscreen
 chmod +x .i3/lock.sh
@@ -129,3 +129,12 @@ ln -s ~/Projects/dotfiles/rofi/config.rasi ~/.config/rofi/config.rasi
 # Add Polybar Configuration
 mkdir -p ~/.config/polybar
 ln -s ~/Projects/dotfiles/polybar/config ~/.config/polybar/config
+
+# Modify GRUB (add the startup menu for choosing the OS)
+sed "s/GRUB_TIMEOUT_STYLE=hidden/GRUB_TIMEOUT_STYLE=menu/" /etc/default/grub > newgrub
+chmod 544 newgrub
+sudo chown root:root newgrub
+echo "Copying new GRUB..."
+sudo cp -f newgrub /etc/default/grub
+sudo update-grub
+
