@@ -103,6 +103,9 @@ yay -S gimp inkscape
 # Install Rofi
 yay -S rofi
 
+# Install Polybar
+yay -S polybar polybar-spotify-git
+
 # Install Nvidia proprietary driver
 sudo mhwd -a pci nonfree 0300
 
@@ -120,3 +123,7 @@ yay -Sc
 # Add Rofi configuration
 mkdir -p ~/.config/rofi
 ln -s ~/Projects/dotfiles/rofi/config.rasi ~/.config/rofi/config.rasi
+
+# Add Polybar Configuration
+mkdir -p ~/.config/polybar
+ln -s ~/Projects/dotfiles/polybar/config ~/.config/polybar/config

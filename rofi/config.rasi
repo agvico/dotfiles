@@ -5,7 +5,7 @@ configuration {
 	lines: 10;
 /*	columns: 1;*/
 	font: "pango:Overpass 12";
-/*	bw: 1;*/
+	bw: 1;
 /*	location: 0;*/
 /*	padding: 5;*/
 /*	yoffset: 0;*/
