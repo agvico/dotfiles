@@ -2,7 +2,6 @@
 
 # Download the dotfiles repo.
 mkdir -p Projects
-mkdir -p .config/rofi
 
 cd Projects
 git clone https://github.com/aklxao2/dotfiles.git .
@@ -105,6 +104,9 @@ yay -S rofi
 
 # Install Polybar
 yay -S polybar polybar-spotify-git
+
+# Install Skype
+yay -S Skype
 
 # Install Nvidia proprietary driver
 sudo mhwd -a pci nonfree 0300
