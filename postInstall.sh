@@ -129,6 +129,8 @@ ln -s ~/Projects/dotfiles/rofi/config.rasi ~/.config/rofi/config.rasi
 # Add Polybar Configuration
 mkdir -p ~/.config/polybar
 ln -s ~/Projects/dotfiles/polybar/config ~/.config/polybar/config
+ln -s ~/Projects/dotfiles/polybar/launch.sh ~/.config/polybar/launch.sh
+chmod +x ~/.config/polybar/launch.sh
 
 # Modify GRUB (add the startup menu for choosing the OS)
 sed "s/GRUB_TIMEOUT_STYLE=hidden/GRUB_TIMEOUT_STYLE=menu/" /etc/default/grub > newgrub
