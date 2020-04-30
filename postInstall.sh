@@ -132,6 +132,9 @@ ln -s ~/Projects/dotfiles/polybar/config ~/.config/polybar/config
 ln -s ~/Projects/dotfiles/polybar/launch.sh ~/.config/polybar/launch.sh
 chmod +x ~/.config/polybar/launch.sh
 
+# Run wal!
+wal -i ~/Imágenes/wallpaper.jpg -a 95
+
 # Modify GRUB (add the startup menu for choosing the OS)
 sed "s/GRUB_TIMEOUT_STYLE=hidden/GRUB_TIMEOUT_STYLE=menu/" /etc/default/grub > newgrub
 chmod 544 newgrub
