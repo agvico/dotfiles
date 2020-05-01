@@ -21,7 +21,10 @@ sudo ln -s $HOME/.i3/lock.sh /usr/bin/customlock
 #################################
 
 # Install Font Awesome and overpass font and Arc theme
-yay -S ttf-font-awesome otf-overpass arc-gtk-theme
+yay -S ttf-font-awesome otf-overpass arc-gtk-theme 
+
+# Install pulseaudio support
+yay -S manjaro-pulse
 
 # Install pywal (for colorschemes)
 yay -S python-pywal
@@ -102,7 +105,7 @@ yay -S polybar polybar-spotify-git
 yay -S skypeforlinux-stable-bin
 
 # Install Nvidia proprietary driver
-sudo mhwd -a pci nonfree 0300
+#sudo mhwd -a pci nonfree 0300
 
 # Clean yay cache after installing all packages
 yay -Sc

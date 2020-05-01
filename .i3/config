@@ -335,11 +335,11 @@ exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 exec redshift-gtk
 exec dropbox
-exec pulseaudio --start
+#exec pulseaudio --start
 exec telegram-desktop
 
 # Set screen resolution (use arandr, then save configuration and go to ./screenlayout to see the .sh file with the config)
-exec_always xrandr --output Virtual1 --primary --mode 1680x1050 --pos 0x0 --rotate normal --output Virtual2 --off --output Virtual3 --off --output Virtual4 --off --output Virtual5 --off --output Virtual6 --off --output Virtual7 --off --output Virtual8 --off
+#exec_always xrandr --output Virtual1 --primary --mode 1680x1050 --pos 0x0 --rotate normal --output Virtual2 --off --output Virtual3 --off --output Virtual4 --off --output Virtual5 --off --output Virtual6 --off --output Virtual7 --off --output Virtual8 --off
 
 # Color palette used for the terminal ( ~/.Xresources file )
 # Colors are gathered based on the documentation:
