@@ -58,7 +58,7 @@ yay -S intellij-idea-ultimate-edition    # Ultimate edition
 yay -S netbeans
 
 # Install LibreOffice
-yay -S libreoffice-fresh
+yay -S libreoffice-fresh libreoffice-fresh-es
 
 # Install LaTeX, TexStudio (LaTeX Editor) and GhostScript for PDF compression
 yay -S texlive-most texstudio ghostscript

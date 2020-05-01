@@ -86,6 +86,9 @@ bindsym $mod+Shift+F5 exec kodi
 bindsym $mod+F4 exec intellij-idea-ultimate-edition # (or just idea) on F4
 bindsym $mod+Shift+F4 exec rstudio-bin
 
+# toggle between enable or disable autolock (useful to avoid block on fullscreen when watching videos)
+bindsym $mod+Ctrl+l xautolock -toggle
+
 # HERE is gonna be created a custom mode with an application launcher:
 # The idea is to press $mod+p (or other) to launch a menu such as the 
 # poweroff menu with my most commonly used apps (IDEs, Documents, etc.)
@@ -330,7 +333,7 @@ exec --no-startup-id blueman-applet
 #exec --no-startup-id start_conky_maia
 exec_always wal -R
 # exec --no-startup-id start_conky_green
-exec --no-startup-id xautolock -time 10 -locker customlock
+exec --no-startup-id xautolock -time 10 -locker customlock -corners ---- -cornersize 20
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 exec redshift-gtk
