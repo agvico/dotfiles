@@ -83,6 +83,7 @@ cursor-scroll = ns-resize
 
 [bar/top]
 inherit = bar/bottom
+enable-ipc = true
 bottom = false
 fixed-center = true
 
@@ -456,9 +457,9 @@ menu-3-1-exec = menu-open-0
 [module/spotify]
 type = custom/script
 interval = 1
-format-prefix = " "
+format-prefix = " "
 format = <label>
-exec = python /usr/share/polybar/scripts/spotify_status.py -f '{artist}: {song}'
+exec = python /usr/share/polybar/scripts/spotify_status.py -f '{play_pause} {artist}: {song}' -p ','
 format-underline = #1db954
 
 
