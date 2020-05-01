@@ -1,12 +1,5 @@
 #! /bin/bash
 
-# Download the dotfiles repo.
-mkdir -p Projects
-
-cd Projects
-git clone https://github.com/aklxao2/dotfiles.git .
-cd ..
-
 # Replace the config files with the new ones (create symlinks)
 rm -rf ~/.i3
 rm ~/.bashrc
@@ -17,11 +10,11 @@ ln -s ~/Projects/dotfiles/.bashrc ~/.bashrc
 
 
 # Copy the wallpaper
-cp Projects/dotfiles/wallpaper.jpg ~/Imágenes
+cp ~/Projects/dotfiles/wallpaper.jpg ~/Imágenes
 
 # Copy the custom lockscreen
 chmod +x .i3/lock.sh
-ln -s $HOME/.i3/lock.sh /usr/bin/customlock
+sudo ln -s $HOME/.i3/lock.sh /usr/bin/customlock
 
 #################################
 #	SOFTWARE INSTALLATION	#
@@ -106,7 +99,7 @@ yay -S rofi
 yay -S polybar polybar-spotify-git
 
 # Install Skype
-yay -S Skype
+yay -S skypeforlinux-stable-bin
 
 # Install Nvidia proprietary driver
 sudo mhwd -a pci nonfree 0300
@@ -121,6 +114,10 @@ yay -Sc
 #################################################
 #		CONFIGURATION			#
 #################################################
+
+# Adds git user name and email
+git config --global user.email "agvico@ujaen.es"
+git config --global user.name "Ángel Miguel García Vico"
 
 # Add Rofi configuration
 mkdir -p ~/.config/rofi
