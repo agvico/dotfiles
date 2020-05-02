@@ -36,7 +36,7 @@ yay -S xca
 yay -S rar xarchiver
 
 # Install blueman (for Bluetooth support)
-yay -S blueman
+yay -S bluez bluez-utils blueman
 
 # Install GNOME Disk Utility (it's easier to me to handle disks this way, sorry)
 yay -S gnome-disk-utility-git
@@ -142,4 +142,7 @@ sudo chown root:root newgrub
 echo "Copying new GRUB..."
 sudo cp -f newgrub /etc/default/grub
 sudo update-grub
+
+# Enable Bluetooth at startup
+sudo systemctl enable bluetooth.service
 

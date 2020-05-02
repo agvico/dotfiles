@@ -50,9 +50,9 @@ bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 #exec --no-startup-id pulseaudio
 #exec --no-startup-id pa-applet
 #bindsym $mod+Ctrl+m exec pavucontrol
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound 
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+bindsym XF86AudioRaiseVolume exec --no-startup-id $HOME/.i3/volume.sh up   #increase sound
+bindsym XF86AudioLowerVolume exec --no-startup-id $HOME/.i3/volume.sh down #decrease sound 
+bindsym XF86AudioMute exec --no-startup-id $HOME/.i3/volume.sh mute  # mute sound
 
 ################################################################################################
 
@@ -87,7 +87,8 @@ bindsym $mod+F4 exec intellij-idea-ultimate-edition # (or just idea) on F4
 bindsym $mod+Shift+F4 exec rstudio-bin
 
 # toggle between enable or disable autolock (useful to avoid block on fullscreen when watching videos)
-bindsym $mod+Ctrl+l xautolock -toggle
+# (Create an script for the notification to realise if we are enabling or disabling it)
+bindsym $mod+Ctrl+l exec "xautolock -toggle; notify-send 'autolock disabled/enabled'"
 
 # HERE is gonna be created a custom mode with an application launcher:
 # The idea is to press $mod+p (or other) to launch a menu such as the 
@@ -227,7 +228,7 @@ bindsym $mod+Shift+9 move container to workspace $ws9; workspace $ws9
  assign [class="Gimp"] $ws6				# Gimp on ws6
  assign [class="Inkscape"] $ws6
  assign [class="TelegramDesktop"] $ws7			# Telegram on ws7
- assign [class="(Spotify|spotify|vlc)"] $ws8		# Spotify on ws8
+ assign [class="(Spotify|spotify|Spotify Premium|vlc)"] $ws8		# Spotify on ws8
  assign [class="VirtualBox Manager"] $ws9		# VirtualBox on workspace 9
  assign [class="Skype"] $ws7
 
@@ -337,9 +338,12 @@ exec --no-startup-id xautolock -time 10 -locker customlock -corners ---- -corner
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 exec redshift-gtk
-exec dropbox
+#exec dropbox
 #exec pulseaudio --start
 exec telegram-desktop
+exec_always pulseaudio-equalizer enable
+
+
 
 # Set screen resolution (use arandr, then save configuration and go to ./screenlayout to see the .sh file with the config)
 #exec_always xrandr --output Virtual1 --primary --mode 1680x1050 --pos 0x0 --rotate normal --output Virtual2 --off --output Virtual3 --off --output Virtual4 --off --output Virtual5 --off --output Virtual6 --off --output Virtual7 --off --output Virtual8 --off
