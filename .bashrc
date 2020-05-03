@@ -147,4 +147,8 @@ source ~/.cache/wal/colors-tty.sh
 alias ..='cd ..'
 alias ...='cd ../..'
 alias la='ls -Al'
+alias update='yay -Syyu'
+alias getpass='openssl rand -base64 20'
+alias backup_home='backup $HOME /mnt/Backup/BACKUP/home/ $HOME/rsync_tmbackup_exclusion_list'
+alias backup_datos='backup /mnt/Datos/ /mnt/Backup/BACKUP/Datos $HOME/rsync_tmbackup_exclusion_list'
 #alias spotify="/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=spotify --file-forwarding com.spotify.Client @@u %U @@"

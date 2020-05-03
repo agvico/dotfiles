@@ -72,8 +72,8 @@ yay -S virtualbox
 # Install RedShift (for adjusting monitor color temperature)
 yay -S redshift redshift-gtk-git
 
-# Install Dropbox
-yay -S dropbox
+# Install Dropbox and insync (google drive)
+yay -S dropbox insync
 
 # Install flatpak
 yay -S flatpak
@@ -83,8 +83,8 @@ yay -S flatpak
 flatpak install spotify
 #yay -S lib32-libcanberra-gtk3
 
-# Install pavucontrol, equalizer and vlc and kodi
-yay -S pulseaudio-equalizer-ladspa pavucontrol vlc kodi
+# Install pavucontrol, equalizer and vlc, kodi and pulseaudio bluetooth module
+yay -S pulseaudio-equalizer-ladspa pavucontrol vlc kodi pulseaudio-modules-bt-git
 
 # Install telegram
 yay -S telegram-desktop
@@ -142,7 +142,17 @@ sudo chown root:root newgrub
 echo "Copying new GRUB..."
 sudo cp -f newgrub /etc/default/grub
 sudo update-grub
+sudo rm newgrub
 
 # Enable Bluetooth at startup
 sudo systemctl enable bluetooth.service
+
+# Avoid pulseaudio to increase volume higher than 100%
+sudo sed "s/volume = merge/volume = ignore/" /usr/share/pulseaudio/alsa-mixer/paths/analog-output.conf.common > audio
+chmod 544 audio
+sudo chown root:root audio
+sudo mv /usr/share/pulseaudio/alsa-mixer/paths/analog-output.conf.common /usr/share/pulseaudio/alsa-mixer/paths/analog-output.conf.common.backup
+sudo cp -f audio /usr/share/pulseaudio/alsa-mixer/paths/analog-output.conf.common
+sudo rm audio
+
 
