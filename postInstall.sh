@@ -118,6 +118,15 @@ yay -Sc
 #		CONFIGURATION			#
 #################################################
 
+# ENABLE NTP (for time sync)
+sed "10a server hora.ujaen.es\\nserver hora2.ujaen.es\\nserver hora.rediris.es\\nserver pool.ntp.org" /etc/ntp.conf > ntp
+chmod 644 ntp
+sudo chown root:root ntp
+sudo cp /etc/ntp.conf /etc/ntp.conf.backup
+sudo cp -f ntp /etc/ntp.conf
+sudo rm ntp
+sudo systemctl enable --now systemd-timesyncd.service
+
 # Adds git user name and email
 git config --global user.email "agvico@ujaen.es"
 git config --global user.name "Ángel Miguel García Vico"
@@ -137,7 +146,7 @@ wal -i ~/Imágenes/wallpaper.jpg -a 95
 
 # Modify GRUB (add the startup menu for choosing the OS)
 sed "s/GRUB_TIMEOUT_STYLE=hidden/GRUB_TIMEOUT_STYLE=menu/" /etc/default/grub > newgrub
-chmod 544 newgrub
+chmod 644 newgrub
 sudo chown root:root newgrub
 echo "Copying new GRUB..."
 sudo cp -f newgrub /etc/default/grub
@@ -149,7 +158,7 @@ sudo systemctl enable bluetooth.service
 
 # Avoid pulseaudio to increase volume higher than 100%
 sudo sed "s/volume = merge/volume = ignore/" /usr/share/pulseaudio/alsa-mixer/paths/analog-output.conf.common > audio
-chmod 544 audio
+chmod 644 audio
 sudo chown root:root audio
 sudo mv /usr/share/pulseaudio/alsa-mixer/paths/analog-output.conf.common /usr/share/pulseaudio/alsa-mixer/paths/analog-output.conf.common.backup
 sudo cp -f audio /usr/share/pulseaudio/alsa-mixer/paths/analog-output.conf.common
