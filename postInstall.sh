@@ -61,7 +61,7 @@ yay -S netbeans
 yay -S libreoffice-fresh libreoffice-fresh-es
 
 # Install LaTeX, TexStudio (LaTeX Editor) and GhostScript for PDF compression
-yay -S texlive-most texstudio ghostscript
+yay -S texlive-most texstudio ghostscript biber
 
 # Install R and RStudio
 yay -S r rstudio-desktop-bin

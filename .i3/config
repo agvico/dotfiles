@@ -85,6 +85,8 @@ bindsym $mod+F5 exec com.spotify.Client		# F5 is multimedia (spotify and kodi)
 bindsym $mod+Shift+F5 exec kodi
 bindsym $mod+F4 exec intellij-idea-ultimate-edition # (or just idea) on F4
 bindsym $mod+Shift+F4 exec rstudio-bin
+bindsym $mod+F6 exec texstudio
+bindsym $mod+Shift+F6 exec lowriter
 
 # toggle between enable or disable autolock (useful to avoid block on fullscreen when watching videos)
 # (Create an script for the notification to realise if we are enabling or disabling it)
@@ -331,7 +333,7 @@ exec --no-startup-id pamac-tray
 exec --no-startup-id clipit
 exec --no-startup-id blueman-applet
 exec_always wal -R
-exec --no-startup-id xautolock -time 10 -locker customlock -corners ---- -cornersize 20
+#exec --no-startup-id xautolock -time 10 -locker customlock -corners ---- -cornersize 20
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 exec redshift-gtk

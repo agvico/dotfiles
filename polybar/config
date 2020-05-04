@@ -290,7 +290,7 @@ format-disconnected =
 [module/date]
 type = internal/date
 interval = 1
-
+utc = true
 date =
 date-alt = " %d-%m-%Y"
 
@@ -360,7 +360,8 @@ bar-volume-empty-foreground = ${colors.foreground-alt}
 
 [module/battery]
 type = internal/battery
-battery = bat0
+;battery = bat0
+battery = BAT1
 adapter = adp1
 full-at = 98
 
