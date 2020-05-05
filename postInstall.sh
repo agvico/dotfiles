@@ -21,7 +21,7 @@ sudo ln -s $HOME/.i3/lock.sh /usr/bin/customlock
 #################################
 
 # Install Font Awesome and overpass font and Arc theme
-yay -S ttf-font-awesome otf-overpass arc-gtk-theme 
+yay -S ttf-font-awesome otf-overpass arc-gtk-theme ttf-ms-fonts ttf-vista-fonts 
 
 # Install pulseaudio support
 yay -S manjaro-pulse
@@ -164,4 +164,6 @@ sudo mv /usr/share/pulseaudio/alsa-mixer/paths/analog-output.conf.common /usr/sh
 sudo cp -f audio /usr/share/pulseaudio/alsa-mixer/paths/analog-output.conf.common
 sudo rm audio
 
+# Enable pulseaudio equalizer at startup
+pulseaudio-equalizer enable-config
 

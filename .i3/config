@@ -339,7 +339,6 @@ exec_always --no-startup-id fix_xcursor
 exec redshift-gtk
 exec insync
 exec telegram-desktop
-exec_always pulseaudio-equalizer enable
 
 
 
