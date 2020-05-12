@@ -266,6 +266,7 @@ for_window [class="Pulseaudio-equalizer-gtk"] floating enable
 for_window [class="Xarchiver"] floating enable
 for_window [class="Gnome-disks"] floating enable
 for_window [class="Blueman-manager"]floating enable border normal
+for_window [class="Dia"] floating enable
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus

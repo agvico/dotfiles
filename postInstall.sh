@@ -20,6 +20,9 @@ sudo ln -s $HOME/.i3/lock.sh /usr/bin/customlock
 #	SOFTWARE INSTALLATION	#
 #################################
 
+# Install gitflow
+yay -S gitflow-avh
+
 # Install Font Awesome and overpass font and Arc theme
 yay -S ttf-font-awesome otf-overpass arc-gtk-theme ttf-ms-fonts ttf-vista-fonts 
 
@@ -103,6 +106,9 @@ yay -S polybar polybar-spotify-git
 
 # Install Skype
 yay -S skypeforlinux-stable-bin
+
+# Install GUFW (Firewall control) and ClamTK (Antivirus)
+yay -S gufw clamtk
 
 # Install Nvidia proprietary driver
 #sudo mhwd -a pci nonfree 0300
