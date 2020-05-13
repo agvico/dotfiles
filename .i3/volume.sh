@@ -21,5 +21,17 @@ case $1 in
 		volume=`amixer -D default -M get Master | grep -Pio '(\d)+%' -m1`
 		notify-send "Volumen: $volume"
 		;;
+	play)
+		playerctl play-pause
+		;;
+	stop)
+		playerctl stop
+		;;
+	next)
+		playerctl next
+		;;
+	previous)
+		playerctl previous
+		;;
 esac
 

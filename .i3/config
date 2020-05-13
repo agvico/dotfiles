@@ -52,6 +52,10 @@ bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 #bindsym $mod+Ctrl+m exec pavucontrol
 bindsym XF86AudioRaiseVolume exec --no-startup-id $HOME/.i3/volume.sh up   #increase sound
 bindsym XF86AudioLowerVolume exec --no-startup-id $HOME/.i3/volume.sh down #decrease sound 
+bindsym XF86AudioPlay exec --no-startup-id $HOME/.i3/volume.sh play	# toggle play/pause
+bindsym XF86AudioStop exec --no-startup-id $HOME/.i3/volume.sh stop	# Stop song
+bindsym XF86AudioNext exec --no-startup-id $HOME/.i3/volume.sh next	# Next song
+bindsym XF86AudioPrev exec --no-startup-id $HOME/.i3/volume.sh previous	# Previous song
 bindsym XF86AudioMute exec --no-startup-id $HOME/.i3/volume.sh mute  # mute sound
 
 ################################################################################################

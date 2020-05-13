@@ -82,8 +82,9 @@ yay -S dropbox insync
 yay -S flatpak
 #sudo systemctl enable --now snapd.socket
 
-# Install Spotify!
+# Install Spotify! (and playerctl for multimedia keybindings)
 flatpak install spotify
+yay -S playerctl
 #yay -S lib32-libcanberra-gtk3
 
 # Install pavucontrol, equalizer and vlc, kodi and pulseaudio bluetooth module
@@ -112,6 +113,9 @@ yay -S gufw clamtk
 
 # Install Nvidia proprietary driver
 #sudo mhwd -a pci nonfree 0300
+
+# Install Printer support
+yay -S manjaro-printer hplip
 
 # Clean yay cache after installing all packages
 yay -Sc
@@ -173,3 +177,7 @@ sudo rm audio
 # Enable pulseaudio equalizer at startup
 pulseaudio-equalizer enable-config
 
+# Configure printers
+sudo gpasswd -a agvico sys
+sudo systemctl enable --now org.cups.cupsd.service
+sudo hp-setup -i
