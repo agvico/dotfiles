@@ -88,7 +88,7 @@ yay -S playerctl
 #yay -S lib32-libcanberra-gtk3
 
 # Install pavucontrol, equalizer and vlc, kodi and pulseaudio bluetooth module
-yay -S pulseaudio-equalizer-ladspa pavucontrol vlc kodi pulseaudio-modules-bt-git
+yay -S pulseaudio-equalizer-ladspa pavucontrol vlc kodi pulseaudio-modules-bt-git paprefs
 
 # Install telegram
 yay -S telegram-desktop
@@ -116,6 +116,9 @@ yay -S gufw clamtk
 
 # Install Printer support
 yay -S manjaro-printer hplip
+
+# Install isw (MSI Laptop fan control)
+yay -S isw
 
 # Clean yay cache after installing all packages
 yay -Sc
@@ -176,6 +179,9 @@ sudo rm audio
 
 # Enable pulseaudio equalizer at startup
 pulseaudio-equalizer enable-config
+
+# Switch audio source when connecting a device, e.g., a bluetooth speaker.
+echo "load-module module-switch-on-connect" | sudo tee -a /etc/pulse/default.pa
 
 # Configure printers
 sudo gpasswd -a agvico sys
