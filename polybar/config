@@ -87,7 +87,7 @@ enable-ipc = true
 bottom = false
 fixed-center = true
 
-modules-left = powermenu
+modules-left = none
 modules-center = mpd spotify
 modules-right = filesystem memory cpu temperature battery date
 tray-position = none

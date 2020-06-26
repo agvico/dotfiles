@@ -183,6 +183,9 @@ pulseaudio-equalizer enable-config
 # Switch audio source when connecting a device, e.g., a bluetooth speaker.
 echo "load-module module-switch-on-connect" | sudo tee -a /etc/pulse/default.pa
 
+# Enable bluetooth adapters at startup
+echo "AutoEnable=true" | sudo tee -a /etc/bluetooth/main.conf
+
 # Configure printers
 sudo gpasswd -a agvico sys
 sudo systemctl enable --now org.cups.cupsd.service
