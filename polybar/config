@@ -89,7 +89,7 @@ fixed-center = true
 
 modules-left = none
 modules-center = mpd spotify
-modules-right = filesystem memory cpu temperature battery date
+modules-right = gmail filesystem memory cpu temperature battery date
 tray-position = none
 
 
@@ -462,6 +462,12 @@ format-prefix = " "
 format = <label>
 exec = python /usr/share/polybar/scripts/spotify_status.py -f '{play_pause} {artist}: {song}' -p ','
 format-underline = #1db954
+
+[module/gmail]
+type = custom/script
+exec = ~/.config/polybar/gmail/launch.py -ns
+tail = true
+click-left = xdg-open https://mail.google.com
 
 
 [settings]
