@@ -455,6 +455,49 @@ menu-3-0-exec = systemctl poweroff
 menu-3-1 = cancel
 menu-3-1-exec = menu-open-0
 
+
+
+
+[module/previous]
+type = custom/script
+interval = 86400
+format = "%{T3}<label>"
+format-padding = 5
+; Previous song icon
+exec = echo ""
+; Check if spotify is running before displaying the icon
+exec-if = "pgrep spotify"
+format-underline = #1db954
+line-size = 1
+click-left = "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous"
+
+[module/next]
+type = custom/script
+interval = 86400
+format = "%{T3}<label>"
+format-padding = 5
+; Next song icon
+exec = echo ""
+; Check if spotify is running before displaying the icon
+exec-if = "pgrep spotify"
+format-underline = #1db954
+line-size = 1
+click-left = "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next"
+
+[module/playpause]
+type = custom/ipc
+; Default
+hook-0 = echo ""
+; Playing
+hook-1 = echo ""
+; Paused
+hook-2 = echo ""
+initial = 1
+format-underline = #1db954
+line-size = 1
+click-left = "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause"
+
+
 [module/spotify]
 type = custom/script
 interval = 1
@@ -462,6 +505,9 @@ format-prefix = " "
 format = <label>
 exec = python /usr/share/polybar/scripts/spotify_status.py -f '{play_pause} {artist}: {song}' -p ','
 format-underline = #1db954
+click-left = i3-msg '[class="Spotify"] focus'
+
+
 
 [module/gmail]
 type = custom/script
