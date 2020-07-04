@@ -154,6 +154,13 @@ ln -s ~/Projects/dotfiles/polybar/config ~/.config/polybar/config
 ln -s ~/Projects/dotfiles/polybar/launch.sh ~/.config/polybar/launch.sh
 chmod +x ~/.config/polybar/launch.sh
 
+# Adds polybar modules
+cd ~/.config/polybar
+curl -LO https://github.com/vyachkonovalov/polybar-gmail/archive/master.tar.gz
+tar zxf master.tar.gz && rm master.tar.gz
+mv polybar-gmail-master gmail
+~/.config/polybar/gmail/auth.py # Runs the script
+
 # Run wal!
 wal -i ~/Imágenes/wallpaper.jpg -a 95
 
