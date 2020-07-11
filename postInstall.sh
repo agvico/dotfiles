@@ -94,7 +94,7 @@ yay -S pulseaudio-equalizer-ladspa pavucontrol vlc kodi pulseaudio-modules-bt-gi
 yay -S telegram-desktop
 
 # Install keePass
-yay -S keepass
+yay -S keepassxc
 
 # Install Gimp and Inkscape
 yay -S gimp inkscape
