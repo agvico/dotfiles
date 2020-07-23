@@ -153,3 +153,7 @@ alias backup_home='backup $HOME /mnt/Backup/BACKUP/home/ $HOME/rsync_tmbackup_ex
 alias backup_datos='backup /mnt/Datos/ /mnt/Backup/BACKUP/Datos $HOME/rsync_tmbackup_exclusion_list'
 #alias connect_raspberry='ssh root@192.168.0.3'
 #alias spotify="/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=spotify --file-forwarding com.spotify.Client @@u %U @@"
+
+xzCompressDir(){
+	tar cf - ${1}/ | xz -z -T 7 -9e - > ${1}.tar.xz
+}
