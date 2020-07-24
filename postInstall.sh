@@ -120,6 +120,9 @@ yay -S manjaro-printer hplip
 # Install isw (MSI Laptop fan control)
 yay -S isw
 
+# Install AutoFirma (Spanish digital sign software)
+yay -S autofirma
+
 # Clean yay cache after installing all packages
 yay -Sc
 
