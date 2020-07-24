@@ -157,3 +157,9 @@ alias backup_datos='backup /mnt/Datos/ /mnt/Backup/BACKUP/Datos $HOME/rsync_tmba
 xzCompressDir(){
 	tar cf - ${1}/ | xz -z -T 7 -9e - > ${1}.tar.xz
 }
+
+
+
+#run neofetch
+neofetch
+
