@@ -74,7 +74,7 @@ if ${use_color} ; then
 	else
 		PS1='\[\033[01;32m\][\u@\h\[\033[01;37m\] \W\[\033[01;32m\]]\$\[\033[00m\] '
 	fi
-	alias ls='ls -lah --color=auto'
+	alias ls='exa -lah --group-directories-first'  #'ls -lah --color=auto'
 	alias grep='grep --colour=auto'
 	alias egrep='egrep --colour=auto'
 	alias fgrep='fgrep --colour=auto'
@@ -159,6 +159,6 @@ xzCompressDir(){
 
 
 
-#run neofetch
+#run neofetch (this must be the last command)
 neofetch
 

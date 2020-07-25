@@ -123,8 +123,8 @@ yay -S isw
 # Install AutoFirma (Spanish digital sign software)
 yay -S autofirma
 
-# Install neofetch
-yay -S neofetch
+# Install neofetch and exa (ls replacement)
+yay -S neofetch exa
 
 # Clean yay cache after installing all packages
 yay -Sc
