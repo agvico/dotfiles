@@ -1,27 +1,28 @@
 {
-	"wallpaper": "~/Projects/dotfiles/wallpaper.jpg",
-    	"alpha": "95",
+    "wallpaper": "/home/agvico/Pictures/wallpaper.jpg",
+    "alpha": "100",
+
     "special": {
-        "background": "#130a07",
-        "foreground": "#a2b9cb",
-        "cursor": "#a2b9cb"
+        "background": "#131313",
+        "foreground": "#9ec6c6",
+        "cursor": "#9ec6c6"
     },
     "colors": {
-        "color0": "#1b0e0a",
-        "color1": "#E63218",
-        "color2": "#A44C2F",
-        "color3": "#EE5627",
-        "color4": "#A96649",
-        "color5": "#FB9831",
-        "color6": "#F9C74E",
-        "color7": "#a2b9cb",
-        "color8": "#71818e",
-        "color9": "#E63218",
-        "color10": "#A44C2F",
-        "color11": "#EE5627",
-        "color12": "#A96649",
-        "color13": "#FB9831",
-        "color14": "#F9C74E",
-        "color15": "#a2b9cb"
+        "color0": "#131313",
+        "color1": "#c14114",
+        "color2": "#189960",
+        "color3": "#8b7518",
+        "color4": "#117649",
+        "color5": "#188b58",
+        "color6": "#189799",
+        "color7": "#cae8d3",
+        "color8": "#1a1a1a",
+        "color9": "#b12b03",
+        "color10": "#13d27e",
+        "color11": "#bf9e14",
+        "color12": "#0da25f",
+        "color13": "#14bf73",
+        "color14": "#13cfd2",
+        "color15": "#9ec6c6"
     }
 }
