@@ -221,6 +221,7 @@ spicetify backup apply enable-devtool
 spicetify update
 SPOTIFY_THEME="ShadowCustom"
 picetify config current_theme $SPOTIFY_THEME
+spicetify config extensions "queueAll.js|djMode.js|shuffle+.js|fullAppDisplay.js"
 spicetify apply
 
 
