@@ -45,7 +45,7 @@ yay -S bluez bluez-utils blueman
 yay -S gnome-disk-utility-git
 
 # Install Firefox
-yay -S firefox
+yay -S firefox python-pywalfox
 
 # Install Java 11
 yay -S jdk11-openjdk
@@ -126,6 +126,9 @@ yay -S autofirma
 # Install neofetch and exa (ls replacement)
 yay -S neofetch exa
 
+# Install Spicetify (SPotify customization)
+yay -S spicetify-cli spicetify-themes-git
+
 # Clean yay cache after installing all packages
 yay -Sc
 
@@ -203,3 +206,21 @@ echo "AutoEnable=true" | sudo tee -a /etc/bluetooth/main.conf
 sudo gpasswd -a agvico sys
 sudo systemctl enable --now org.cups.cupsd.service
 sudo hp-setup -i
+
+#Configure pywalfox
+sudo chmod +x /usr/lib/python3.8/site-packages/pywalfox/bin/main.sh
+sudo pywalfox setup
+
+#Configure Spicetify (Spotify customization. NOTE: Installed from flatpak!)
+ln -s ~/Projects/dotfiles/spicetify/config.ini ~/.config/spicetify/config.ini
+sudo chmod a+wr /var/lib/flatpak/app/com.spotify.Client/current/active/files/extra/share/spotify
+sudo chmod a+wr -R /var/lib/flatpak/app/com.spotify.Client/current/active/files/extra/share/spotify/Apps/
+
+spicetify
+spicetify backup apply enable-devtool
+spicetify update
+SPOTIFY_THEME="ShadowCustom"
+picetify config current_theme $SPOTIFY_THEME
+spicetify apply
+
+
