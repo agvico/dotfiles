@@ -23,8 +23,8 @@ sudo ln -s $HOME/.i3/lock.sh /usr/bin/customlock
 # Install gitflow
 yay -S gitflow-avh
 
-# Install Font Awesome and overpass font and Arc theme
-yay -S ttf-font-awesome otf-overpass arc-gtk-theme ttf-ms-fonts ttf-vista-fonts ttf-cascadia-code
+# Install Font Awesome and overpass font and Arc and orchis theme
+yay -S ttf-font-awesome otf-overpass arc-gtk-theme orchis-theme-git ttf-ms-fonts ttf-vista-fonts ttf-cascadia-code
 
 # Install pulseaudio support
 yay -S manjaro-pulse
