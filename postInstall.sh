@@ -7,7 +7,7 @@ rm ~/.bashrc
 # Create the symlinks to important files.
 ln -s ~/Projects/dotfiles/.i3 ~/.i3
 ln -s ~/Projects/dotfiles/.bashrc ~/.bashrc
-
+ln -s ~/Projects/dotfiles/.Xresources .Xresources
 
 # Copy the wallpaper
 cp ~/Projects/dotfiles/wallpaper.jpg ~/Imágenes
