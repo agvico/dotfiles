@@ -88,7 +88,7 @@ yay -S playerctl
 #yay -S lib32-libcanberra-gtk3
 
 # Install pavucontrol, equalizer and vlc, kodi and pulseaudio bluetooth module
-yay -S pulseaudio-equalizer-ladspa pavucontrol vlc kodi pulseaudio-modules-bt-git paprefs
+yay -S pulseaudio-equalizer-ladspa pavucontrol vlc kodi pulseaudio-modules-bt-git paprefs kdenlive
 
 # Install telegram
 yay -S telegram-desktop
@@ -112,7 +112,7 @@ yay -S skypeforlinux-stable-bin
 yay -S gufw clamtk
 
 # Install Nvidia proprietary driver
-#sudo mhwd -a pci nonfree 0300
+sudo mhwd -a pci nonfree 0300
 
 # Install Printer support
 yay -S manjaro-printer hplip
@@ -169,6 +169,7 @@ curl -LO https://github.com/vyachkonovalov/polybar-gmail/archive/master.tar.gz
 tar zxf master.tar.gz && rm master.tar.gz
 mv polybar-gmail-master gmail
 ~/.config/polybar/gmail/auth.py # Runs the script
+cd ~
 
 # Run wal!
 wal -i ~/Imágenes/wallpaper.jpg -a 95
@@ -224,4 +225,7 @@ picetify config current_theme $SPOTIFY_THEME
 spicetify config extensions "queueAll.js|djMode.js|shuffle+.js|fullAppDisplay.js"
 spicetify apply
 
+# Configure Firefox (https://github.com/dbuxy218/Prismatic-Night#userchrome)
+#sudo cp ~/.mozilla/firefox/newpage/mozilla.cfg /usr/lib/firefox
+#sudo cp ~/.mozilla/firefox/newpage/local-settings.js /usr/lib/firefox/defaults/pref/
 
