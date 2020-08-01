@@ -6,9 +6,6 @@ rm ~/.bashrc
 rm ~/.Xresources
 
 # Create the symlinks to important files.
-ln -s ~/Projects/dotfiles/.i3 ~/.i3
-ln -s ~/Projects/dotfiles/.bashrc ~/.bashrc
-ln -s ~/Projects/dotfiles/.Xresources .Xresources
 
 # Copy the wallpaper
 cp ~/Projects/dotfiles/wallpaper.jpg ~/Imágenes
@@ -230,3 +227,8 @@ spicetify apply
 #sudo cp ~/.mozilla/firefox/newpage/mozilla.cfg /usr/lib/firefox
 #sudo cp ~/.mozilla/firefox/newpage/local-settings.js /usr/lib/firefox/defaults/pref/
 
+
+#symlinks to important files
+ln -s ~/Projects/dotfiles/.i3 ~/.i3
+ln -s ~/Projects/dotfiles/.bashrc ~/.bashrc
+ln -s ~/Projects/dotfiles/.Xresources .Xresources
