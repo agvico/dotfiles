@@ -3,6 +3,7 @@
 # Replace the config files with the new ones (create symlinks)
 rm -rf ~/.i3
 rm ~/.bashrc
+rm ~/.Xresources
 
 # Create the symlinks to important files.
 ln -s ~/Projects/dotfiles/.i3 ~/.i3
