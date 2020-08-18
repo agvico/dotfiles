@@ -92,7 +92,7 @@ bindsym $mod+Shift+F4 exec rstudio-bin
 bindsym $mod+F6 exec texstudio
 bindsym $mod+Shift+F6 exec lowriter
 bindsym $mod+Tab exec rofi -show window
-bindsym $mod+s exec rofi -show ssh
+bindsym $mod+Ctrl+s exec rofi -show ssh
 
 # toggle between enable or disable autolock (useful to avoid block on fullscreen when watching videos)
 # (Create an script for the notification to realise if we are enabling or disabling it)
@@ -344,7 +344,7 @@ exec_always wal -R
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 exec redshift-gtk
-exec insync
+exec insync start
 exec telegram-desktop
 
 

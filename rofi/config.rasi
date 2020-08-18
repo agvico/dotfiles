@@ -145,6 +145,10 @@ configuration {
 /*	me-accept-custom: "Control+MouseDPrimary";*/
 }
 
+* {
+  border-color: White;
+}
+
 window{
 	transparency:	"background";
 	fullscreen: 	false;
@@ -155,5 +159,7 @@ window{
 
 mainbox {
 	padding: 10;
+	border:  2;
 	border-radius: 10px;
+	border-color: #86af80;
 }

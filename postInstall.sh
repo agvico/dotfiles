@@ -34,7 +34,7 @@ yay -S python-pywal
 yay -S xca
 
 # Install RAR support
-yay -S rar xarchiver
+yay -S unzip zip rar xarchiver
 
 # Install blueman (for Bluetooth support)
 yay -S bluez bluez-utils blueman
