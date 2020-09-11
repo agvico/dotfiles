@@ -127,6 +127,9 @@ yay -S neofetch exa
 # Install Spicetify (SPotify customization)
 yay -S spicetify-cli spicetify-themes-git
 
+# Install Thunar (file manager)
+yay -S thunar
+
 # Clean yay cache after installing all packages
 yay -Sc
 
