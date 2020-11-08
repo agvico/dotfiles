@@ -6,6 +6,7 @@ rm ~/.bashrc
 rm ~/.Xresources
 
 # Create the symlinks to important files.
+mkdir -p ~/Projects/dotfiles
 
 # Copy the wallpaper
 cp ~/Projects/dotfiles/wallpaper.jpg ~/Imágenes
@@ -18,124 +19,16 @@ sudo ln -s $HOME/.i3/lock.sh /usr/bin/customlock
 #	SOFTWARE INSTALLATION	#
 #################################
 
-# Install gitflow
-yay -S gitflow-avh
-
-# Install Font Awesome and overpass font and Arc and orchis theme
-yay -S ttf-font-awesome otf-overpass arc-gtk-theme orchis-theme-git ttf-ms-fonts ttf-vista-fonts ttf-cascadia-code
-
-# Install pulseaudio support
-yay -S manjaro-pulse
-
-# Install pywal (for colorschemes)
-yay -S python-pywal
-
-# Install xca (digital certificates manager)
-yay -S xca
-
-# Install RAR support
-yay -S unzip zip rar xarchiver
-
-# Install blueman (for Bluetooth support)
-yay -S bluez bluez-utils blueman
-
-# Install GNOME Disk Utility (it's easier to me to handle disks this way, sorry)
-yay -S gnome-disk-utility-git
-
-# Install Firefox
-yay -S firefox python-pywalfox
-
-# Install Java 11
-yay -S jdk11-openjdk
-
-# Install Scala and sbt
-yay -S scala sbt
-
-# Install IntelliJ Idea (Ultimate or Community)
-yay -S intellij-idea-ultimate-edition    # Ultimate edition
-#yay -S intellij-idea-community-edition  # Community edition
-
-# Install Netbeans
-yay -S netbeans
-
-# Install LibreOffice
-yay -S libreoffice-fresh libreoffice-fresh-es
-
-# Install LaTeX, TexStudio (LaTeX Editor) and GhostScript for PDF compression
-yay -S texlive-most texstudio ghostscript biber
-
-# Install R and RStudio
-yay -S r rstudio-desktop-bin
-
-# Install VirtualBox
-yay -S virtualbox
-
-# Install RedShift (for adjusting monitor color temperature)
-yay -S redshift redshift-gtk-git
-
-# Install Dropbox and insync (google drive)
-yay -S dropbox insync
-
-# Install flatpak
-yay -S flatpak
-#sudo systemctl enable --now snapd.socket
-
-# Install Spotify! (and playerctl for multimedia keybindings)
-flatpak install spotify
-yay -S playerctl
-#yay -S lib32-libcanberra-gtk3
-
-# Install pavucontrol, equalizer and vlc, kodi and pulseaudio bluetooth module
-yay -S pulseaudio-equalizer-ladspa pavucontrol vlc kodi pulseaudio-modules-bt-git paprefs kdenlive
-
-# Install telegram
-yay -S telegram-desktop
-
-# Install keePass
-yay -S keepassxc
-
-# Install Gimp and Inkscape
-yay -S gimp inkscape
-
-# Install Rofi
-yay -S rofi
-
-# Install Polybar
-yay -S polybar polybar-spotify-git
-
-# Install Skype
-yay -S skypeforlinux-stable-bin
-
-# Install GUFW (Firewall control) and ClamTK (Antivirus)
-yay -S gufw clamtk
-
-# Install Nvidia proprietary driver
-sudo mhwd -a pci nonfree 0300
-
-# Install Printer support
-yay -S manjaro-printer hplip
-
-# Install isw (MSI Laptop fan control)
-yay -S isw
-
-# Install AutoFirma (Spanish digital sign software)
-yay -S autofirma
-
-# Install neofetch and exa (ls replacement)
-yay -S neofetch exa
-
-# Install Spicetify (SPotify customization)
-yay -S spicetify-cli spicetify-themes-git
-
-# Install Thunar (file manager)
-yay -S thunar
+yay -S gitflow-avh ttf-font-awesome otf-overpass arc-gtk-theme orchis-theme-git ttf-ms-fonts ttf-vista-fonts ttf-cascadia-code manjaro-pulse python-pywal xca unzip zip rar xarchiver bluez bluez-utils blueman gnome-disk-utility-git firefox python-pywalfox jdk11-openjdk scala sbt intellij-idea-ultimate-edition netbeans libreoffice-fresh libreoffice-fresh-es texlive-most texstudio ghostscript biber r rstudio-desktop-bin virtualbox redshift redshift-gtk-git insync flatpak playerctl pulseaudio-equalizer-ladspa pavucontrol vlc kodi pulseaudio-modules-bt-git paprefs kdenlive telegram-desktop keepassxc gimp inkscape rofi polybar polybar-spotify-git skypeforlinux-stable-bin gufw clamtk manjaro-printer hplip isw autofirma neofetch exa spicetify-cli spicetify-themes-git thunar thunar-archive-plugin
 
 # Clean yay cache after installing all packages
 yay -Sc
 
+# Install Spotify (via flatpak)
+flatpak install spotify
 
-
-
+# Install Nvidia proprietary driver
+sudo mhwd -a pci nonfree 0300
 
 #################################################
 #		CONFIGURATION			#
