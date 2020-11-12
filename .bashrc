@@ -130,6 +130,7 @@ ex ()
       *.zip)       unzip $1     ;;
       *.Z)         uncompress $1;;
       *.7z)        7z x $1      ;;
+      *.xz)	   xz -dk $1	;;
       *)           echo "'$1' cannot be extracted via ex()" ;;
     esac
   else
