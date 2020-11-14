@@ -1,0 +1,10 @@
+#
+#
+#  MY CRONTAB.   Usage:
+#
+#	min	hour	day	month	weekday		command
+	0	14	*	*	*		/usr/bin/rsync -a --delete /home/agvico/Universidad/* /mnt/Datos/GDrive/Universidad/
+	0	18	*	*	*		/usr/bin/rsync -a --delete /home/agvico/Universidad/* /mnt/Datos/GDrive/Universidad/
+	0	14	*	*	*		/usr/bin/rsync -a --delete /home/agvico/Universidad/* /run/media/agvico/HD/Universidad/
+	0	16	*	*	*		/usr/bin/rsync -a --delete /mnt/Datos/GDrive/* /run/media/agvico/HD/GDrive
+	@reboot						/usr/bin/insync start

@@ -128,3 +128,7 @@ spicetify apply
 ln -s ~/Projects/dotfiles/.i3 ~/.i3
 ln -s ~/Projects/dotfiles/.bashrc ~/.bashrc
 ln -s ~/Projects/dotfiles/.Xresources .Xresources
+
+# Restore crontab
+crontab cron-backup
+
