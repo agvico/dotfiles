@@ -153,6 +153,8 @@ alias backup_home='backup --strategy "1:1 30:30 365:30" $HOME /mnt/Backup/BACKUP
 alias backup_datos='backup --strategy "1:1 30:30 365:30" /mnt/Datos/ /mnt/Backup/BACKUP/Datos $HOME/rsync_tmbackup_exclusion_list'
 alias encenderLEDs='curl -X POST "http://192.168.0.2/light/leds_habitacion/turn_on?brightness=120&r=0&g=0&b=255&effect=rainbow"'
 alias apagarLEDs='curl -X POST "http://192.168.0.2/light/leds_habitacion/turn_off"'
+alias listDirsBySpace='du -a | sort -n -r | head -n 15'
+alias cleanSpotifyCache='rm -r .var/app/com.spotify.Client/cache/spotify/Data/'
 #alias connect_raspberry='ssh root@192.168.0.3'
 #alias spotify="/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=spotify --file-forwarding com.spotify.Client @@u %U @@"
 
