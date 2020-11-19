@@ -85,6 +85,7 @@ bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
 
 # My custom keybindings
 bindsym $mod+Shift+0 exec customlock	 	# start lockscreen
+bindsym $mod+Ctrl+0 exec xset dpms force off	# Power off monitor
 bindsym $mod+F5 exec com.spotify.Client		# F5 is multimedia (spotify and kodi)
 bindsym $mod+Shift+F5 exec kodi
 bindsym $mod+F4 exec intellij-idea-ultimate-edition # (or just idea) on F4
