@@ -70,9 +70,12 @@ bindsym XF86MonBrightnessDown exec "xbacklight -dec 10; notify-send 'brightness 
 # Start Applications
 bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
 bindsym $mod+F2 exec firefox
-bindsym $mod+F3 exec thunar
+bindsym $mod+Shift+F2 exec chromium
+bindsym $mod+F3 exec texstudio
+bindsym $mod+Shift+F3 exec lowriter
+bindsym $mod+Shift+Return exec thunar
 # bindsym $mod+F3 exec ranger
-bindsym $mod+Shift+F3 exec pcmanfm_pkexec
+#bindsym $mod+Shift+F3 exec pcmanfm_pkexec
 #bindsym $mod+F5 exec terminal -e 'mocp'
 bindsym $mod+t exec --no-startup-id pkill compton
 bindsym $mod+Ctrl+t exec --no-startup-id compton -b -f
@@ -91,8 +94,6 @@ bindsym $mod+F5 exec com.spotify.Client		# F5 is multimedia (spotify and kodi)
 bindsym $mod+Shift+F5 exec kodi
 bindsym $mod+F4 exec intellij-idea-ultimate-edition # (or just idea) on F4
 bindsym $mod+Shift+F4 exec rstudio-bin
-bindsym $mod+F6 exec texstudio
-bindsym $mod+Shift+F6 exec lowriter
 bindsym $mod+Tab exec rofi -show window
 bindsym $mod+Ctrl+s exec rofi -show ssh
 
