@@ -87,12 +87,16 @@ enable-ipc = true
 bottom = false
 fixed-center = true
 
-modules-left = none
+modules-left = ledLights
 modules-center = mpd spotify
 modules-right = gmail filesystem memory cpu temperature battery date
 tray-position = none
 
-
+[module/ledLights]
+type = custom/script
+exec = ~/Projects/dotfiles/polybar/toggle-lights.sh
+tail = true
+click-left = kill -USR1 %pid%
 
 [module/xwindow]
 type = internal/xwindow
