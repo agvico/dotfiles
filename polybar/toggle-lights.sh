@@ -18,6 +18,23 @@ turnOn(){
 	curl -X POST $dir
 }
 
+setBrightnessDown(){
+	brightness=$(( ${brightness}-10 ))
+	if [ $brightness -lq 100 ] 
+	then
+		brightness=100
+	fi
+	turnOn "$ip" "$entityName" "$brightness" "$r" "$g" "$b" "$effect"
+}
+
+setBrightnessUp(){
+	brightness=$(( ${brightness}+10 ))
+	if [ $brightness -gt 255 ]
+	then
+		$brightness=255
+	fi
+	turnOn "$ip" "$entityName" "$brightness" "$r" "$g" "$b" "$effect"
+}
 
 toggleLights() {
 state=$(getState $ip $entityName)
@@ -41,10 +58,12 @@ ip="192.168.0.2"
 entityName="light/leds_habitacion"
 
 trap toggleLights USR1
-
+#trap setBrightnessDown TERM
+#trap setBrightnessUp INT
 
 while true; do
 	state=$(getState $ip $entityName)
+	brightness=$(curl -s -X GET "http://$ip/$entityName") | jq ".brightness"
 	if [ $state = "\"ON\"" ]
 	then
 		echo " ON"
